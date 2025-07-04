@@ -47,6 +47,24 @@
     </div>
     <p id="load">Firebase SDK Loading&hellip;</p>
 
+    <nav>
+        <div class="logo-container">
+            <a href="../index.html"><img src="../assets/bg removed logo.png" alt="Infinito Creations Logo" class="site-logo"></a>
+        </div>
+        <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../services.html">Our Services</a></li>
+            <li><a href="../ourwork.html">Our Work</a></li>
+            <li><a href="../about.html">About</a></li>
+        </ul>
+    </nav>
+
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         const loadEl = document.querySelector('#load');
@@ -84,6 +102,18 @@
           loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
         }
       });
+    </script>
+
+    <script src="../js/loader.js"></script>
+    <script>
+    // Hamburger menu toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('nav ul');
+    navToggle.addEventListener('click', function() {
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', !expanded);
+        navMenu.classList.toggle('open');
+    });
     </script>
   </body>
 </html>

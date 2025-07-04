@@ -126,6 +126,11 @@
         <div class="logo-container">
             <a href="index.html"><img src="assets/bg removed logo.png" alt="Infinito Creations Logo" class="site-logo"></a>
         </div>
+        <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="blog.html">Blog</a></li>
@@ -171,5 +176,15 @@
         </section>
     </main>
     <script src="js/loader.js"></script>
+    <script>
+    // Hamburger menu toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('nav ul');
+    navToggle.addEventListener('click', function() {
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', !expanded);
+        navMenu.classList.toggle('open');
+    });
+    </script>
 </body>
 </html>

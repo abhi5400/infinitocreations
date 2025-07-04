@@ -25,12 +25,17 @@
         <div class="logo-container">
             <a href="index.html"><img src="assets/bg removed logo.png" alt="Infinito Creations Logo" class="site-logo"></a>
         </div>
+        <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="services.html">Our Services</a></li>
-            <li><a href="about.html">About</a></li>
             <li><a href="ourwork.html">Our Work</a></li>
+            <li><a href="about.html">About</a></li>
         </ul>
     </nav>
     <div style="text-align:center; margin-top:32px;">
@@ -40,15 +45,15 @@
         <section class="about-hero">
             <h1>About Infinito Creations</h1>
             <p>At <strong>Infinito Creation</strong>, we are passionate digital architects dedicated to building high-impact online identities for brands that want to grow, connect, and lead in the digital space.</p>
-            <p>Founded by <strong>Abhijeet Jha</strong> and <strong>Vivek Singh</strong>, two Jaipur-based web developers and digital strategists, our agency blends creativity with performance. With a strong foundation in <strong>web development, <a href="blog.html">SEO</a>, content strategy, and visual media</strong>, we craft user-first websites and digital experiences that don’t just look good — they <strong>drive real results</strong>.</p>
+            <p>Founded by <strong>Abhijeet Jha</strong> and <strong>Vivek Singh</strong>, two Jaipur-based web developers and digital strategists, our agency blends creativity with performance. With a strong foundation in <strong>web development, <a href="blog.html">SEO</a>, content strategy, and visual media</strong>, we craft user-first websites and digital experiences that don't just look good — they <strong>drive real results</strong>.</p>
             <ul style="margin: 18px 0 0 0; padding-left: 20px;">
                 <li><strong><a href="blog.html">SEO</a>-optimized websites</strong></li>
                 <li><strong>Engaging content strategies</strong></li>
                 <li><strong>Performance-driven digital marketing</strong></li>
                 <li><strong>Visual storytelling through media and design</strong></li>
             </ul>
-            <p style="margin-top: 18px;">Currently pursuing our B.C.A., we bring fresh perspectives to every project while staying ahead of digital trends — especially where <strong>AI meets marketing</strong>.<br><br>Whether you're a startup or a growing brand, we’re here to help you build something powerful, purposeful, and performance-focused.</p>
-            <p style="font-weight:600; margin-top: 18px;">Let’s create something infinite.</p>
+            <p style="margin-top: 18px;">Currently pursuing our B.C.A., we bring fresh perspectives to every project while staying ahead of digital trends — especially where <strong>AI meets marketing</strong>.<br><br>Whether you're a startup or a growing brand, we're here to help you build something powerful, purposeful, and performance-focused.</p>
+            <p style="font-weight:600; margin-top: 18px;">Let's create something infinite.</p>
         </section>
         <section class="about-values">
             <h2>Meet the Founders</h2>
@@ -57,9 +62,9 @@
                     <h3 style="color:#eebbc3;">Abhijeet Jha</h3>
                     <p style="font-weight:600; margin-bottom:6px;">Web Developer | <a href="blog.html">SEO Specialist</a> | Content Strategist | Visual Content Creator</p>
                     <p style="color:#232946;">Based in Jaipur – crafting <a href="blog.html">SEO</a>-optimized, user-first websites and digital content.</p>
-                    <p>I’m a results-driven digital professional with a passion for building strong, high-impact online identities. With a background in web development, <a href="blog.html">SEO</a>, and digital marketing, I specialize in creating content-rich, performance-driven websites that attract and engage users.</p>
-                    <p>Whether it’s optimizing a site for search engines, developing from scratch, or creating visual content that tells a story, I focus on delivering meaningful digital experiences that help brands grow. I'm currently pursuing a B.C.A. and deeply interested in how AI is shaping the future of marketing and content creation.</p>
-                    <p style="font-weight:600;">Let’s build something powerful, purposeful, and performance-focused.</p>
+                    <p>I'm a results-driven digital professional with a passion for building strong, high-impact online identities. With a background in web development, <a href="blog.html">SEO</a>, and digital marketing, I specialize in creating content-rich, performance-driven websites that attract and engage users.</p>
+                    <p>Whether it's optimizing a site for search engines, developing from scratch, or creating visual content that tells a story, I focus on delivering meaningful digital experiences that help brands grow. I'm currently pursuing a B.C.A. and deeply interested in how AI is shaping the future of marketing and content creation.</p>
+                    <p style="font-weight:600;">Let's build something powerful, purposeful, and performance-focused.</p>
                 </div>
                 <div style="flex:1 1 320px; min-width:260px; background:#fff; border-radius:12px; box-shadow:0 2px 12px rgba(35,41,70,0.08); padding:28px 22px; margin-bottom:18px;">
                     <h3 style="color:#eebbc3;">Vivek Singh</h3>
@@ -79,5 +84,15 @@
         </section>
     </main>
     <script src="js/loader.js"></script>
+    <script>
+    // Hamburger menu toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('nav ul');
+    navToggle.addEventListener('click', function() {
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', !expanded);
+        navMenu.classList.toggle('open');
+    });
+    </script>
 </body>
 </html>
