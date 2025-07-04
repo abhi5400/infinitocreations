@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | Infinito Creations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo-container">
+            <a href="index.html"><img src="assets/bg removed logo.png" alt="Infinito Creations Logo" class="site-logo"></a>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="ourwork.html">Our Work</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Admin Panel</h1>
+        <form id="admin-login">
+            <label for="admin-id">Admin ID:</label>
+            <input type="text" id="admin-id" name="admin-id" required>
+            <label for="admin-password">Password:</label>
+            <input type="password" id="admin-password" name="admin-password" required>
+            <button type="submit">Login</button>
+        </form>
+        <div id="admin-content" style="display:none;">
+            <h2>Welcome, Admin!</h2>
+            <p>Here you can manage blogs, services, and prices. (Functionality to be added)</p>
+        </div>
+        <script>
+        document.getElementById('admin-login').onsubmit = function(e) {
+            e.preventDefault();
+            const id = document.getElementById('admin-id').value;
+            const pw = document.getElementById('admin-password').value;
+            if(id === 'admin5400' && pw === '@Abhijeetadmin5400') {
+                document.getElementById('admin-login').style.display = 'none';
+                document.getElementById('admin-content').style.display = 'block';
+            } else {
+                alert('Invalid admin credentials.');
+            }
+        };
+        </script>
+    </main>
+    <script src="js/loader.js"></script>
+</body>
+</html>
